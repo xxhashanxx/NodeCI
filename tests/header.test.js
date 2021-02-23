@@ -25,7 +25,7 @@ test('clicking login starts oauth flow', async () => {
   expect(url).toMatch(/accounts\.google\.com/);
 });
 
-test.only('When signed in, shows logout button', async () => {
+test('When signed in, shows logout button', async () => {
   await page.login();
 
   const text = await page.$eval('a[href="/auth/logout"]', el => el.innerHTML);
