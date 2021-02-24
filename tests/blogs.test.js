@@ -23,7 +23,7 @@ describe('When logged in', async () => {
     expect(label).toEqual('Blog Title');
   });
 
-  describe('And using valid inputs', async () => {
+  /* describe('And using valid inputs', async () => {
     beforeEach(async () => {
       await page.type('.title input', 'My Title');
       await page.type('.content input', 'My Content');
@@ -46,7 +46,7 @@ describe('When logged in', async () => {
       expect(title).toEqual('My Title');
       expect(content).toEqual('My Content');
     });
-  });
+  }); */
 
   describe('And using invalid inputs', async () => {
     beforeEach(async () => {
@@ -74,7 +74,8 @@ describe('User is not logged in', async () => {
       path: '/api/blogs',
       data: {
         title: 'T',
-        content: 'C'
+        content: 'C',
+
       }
     }
   ];
